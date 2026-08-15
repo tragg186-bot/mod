@@ -1,0 +1,6 @@
+{
+  "max_stamina": 100,
+  "sprint_drain": 8,
+  "recovery": 5,
+  "recovery_delay": 20
+}

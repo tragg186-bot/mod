@@ -1,0 +1,17 @@
+{
+  "starting_lives": 10,
+  "allow_extra_lives": true,
+  "hud": {
+    "show_lives": true,
+    "show_stamina": false,
+    "show_level": true,
+    "show_messages": true
+  },
+  "progression": [
+    "LEVEL_0",
+    "POOLROOMS",
+    "CAVE_SYSTEM",
+    "LEVEL_4",
+    "LEVEL_FUN"
+  ]
+}

@@ -1,0 +1,38 @@
+plugins {
+    id 'net.fabricmc.fabric-loom' version '1.17'
+    id 'java'
+}
+
+group = 'com.backrooms'
+version = '0.1.0'
+archivesBaseName = 'backrooms'
+
+repositories {
+    mavenCentral()
+    maven { url = "https://maven.fabricmc.net/" }
+}
+
+def minecraft_version = '1.21.1'
+def yarn_mappings = '1.21.1+build.3'      // Verifica en maven.fabricmc.net si esta build exacta existe; ajusta si es necesario
+def loader_version = '0.15.11'
+def fabric_api_version = '0.116.15+1.21.1'
+
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings "net.fabricmc:yarn:${yarn_mappings}:v2"
+    modImplementation "net.fabricmc:fabric-loader:${loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_api_version}"
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+sourceCompatibility = JavaVersion.VERSION_21
+targetCompatibility = JavaVersion.VERSION_21
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = "UTF-8"
+}
